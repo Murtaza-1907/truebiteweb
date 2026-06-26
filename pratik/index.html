@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrueBite - Healthy Food Marketplace</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <header class="nav">
+    <nav class="nav-left">
+      <a href="index.html#products">Products</a>
+      <a href="buy.html">Compare</a>
+      <a href="about.html">About</a>
+    </nav>
+    <a class="brand center-logo" href="index.html" aria-label="TrueBite home">
+      <img src="assets/truebite-logo-transparent-cropped.png" alt="TrueBite logo">
+    </a>
+    <button class="pill" onclick="location.href='checkout.html'">Cart <b id="cartCount">0</b></button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Healthy grocery decisions, already decoded</p>
+        <h1>Buy the best food product in every category.</h1>
+        <p>TrueBite compares labels, nutrients, ingredients, additives, price and value across 48 popular Indian product categories.</p>
+        <div class="hero-actions">
+          <button onclick="location.href='index.html#products'">Explore 48 picks</button>
+          <button class="ghost" onclick="location.href='buy.html'">View comparison</button>
+        </div>
+      </div>
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/hero-shopping-illustration-cutout.png" alt="">
+      </div>
+    </section>
+
+    <section class="strip">
+      <span>Label scanning</span><span>Nutrient scoring</span><span>Ingredient warnings</span><span>Top 3 comparisons</span><span>Razorpay checkout</span>
+    </section>
+
+    <section class="controls" id="products">
+      <div>
+        <h2>Curated healthy marketplace</h2>
+        <p>48 Indian best picks, each backed by two competitor products.</p>
+      </div>
+      <input id="search" placeholder="Search category, brand or product">
+      <select id="categoryFilter"><option value="all">All categories</option></select>
+    </section>
+    <section class="grid" id="productGrid"></section>
+  </main>
+
+  <footer>
+    <div><b>truebite</b><p>Healthy alternatives marketplace for people who want the cleanest food choice without label fatigue.</p></div>
+    <a href="index.html#home">Back to top</a>
+  </footer>
+  <script src="data.js?v=4"></script>
+  <script src="app.js?v=4"></script>
+</body>
+</html>

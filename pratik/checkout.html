@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrueBite - Razorpay Checkout</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <header class="nav">
+    <nav class="nav-left">
+      <a href="index.html#products">Products</a>
+      <a href="buy.html">Compare</a>
+      <a href="about.html">About</a>
+    </nav>
+    <a class="brand center-logo" href="index.html" aria-label="TrueBite home">
+      <img src="assets/truebite-logo-transparent-cropped.png" alt="TrueBite logo">
+    </a>
+    <button class="pill" onclick="location.href='checkout.html'">Cart <b id="cartCount">0</b></button>
+  </header>
+
+  <main id="checkoutPage" class="checkout-page">
+    <section class="razorpay-shell">
+      <div class="pay-panel merchant-panel">
+        <div class="pay-brand-row"><span class="razorpay-mark">Razorpay</span><span class="secure-pill">100% Secure</span></div>
+        <h1>TrueBite Checkout</h1>
+        <p>Complete your payment securely through UPI, card, wallet, or netbanking.</p>
+        <div id="checkoutItems"></div>
+        <div class="pay-row"><span>Subtotal</span><b id="paySubtotal">₹0</b></div>
+        <div class="pay-row"><span>Platform fee</span><b>₹12</b></div>
+        <div class="pay-total"><span>Total</span><b id="payTotal">₹0</b></div>
+        <div class="trust-row"><span>PCI DSS</span><span>256-bit SSL</span><span>Instant refund support</span></div>
+      </div>
+      <aside class="pay-panel method-panel">
+        <h2>Payment method</h2>
+        <div class="qr-box">
+          <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi%3A%2F%2Fpay%3Fpa%3Dtruebite%40razorpay%26pn%3DTrueBite%26tn%3DTrueBite%2520Order%26cu%3DINR" alt="UPI payment QR code">
+          <div><b>Scan and pay</b><small>Use any UPI app to scan this QR.</small></div>
+        </div>
+        <label><input type="radio" checked> UPI ID</label>
+        <input placeholder="yourname@upi">
+        <div class="upi-apps">
+          <button type="button"><img src="https://cdn.simpleicons.org/googlepay/4285F4" alt="">GPay</button><button type="button"><img src="https://cdn.simpleicons.org/phonepe/5F259F" alt="">PhonePe</button><button type="button"><img src="https://cdn.simpleicons.org/paytm/00BAF2" alt="">Paytm</button><button type="button"><img src="https://upload.wikimedia.org/wikipedia/en/6/65/BHIM_Logo.svg" alt="">BHIM</button>
+        </div>
+        <label><input type="radio"> Debit / Credit Card</label>
+        <div class="card-networks">
+          <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="Visa">
+          <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="Mastercard">
+          <img src="https://cdn.simpleicons.org/rupay/1F4BA4" alt="RuPay">
+        </div>
+        <input placeholder="Card number">
+        <div class="pay-grid">
+          <input placeholder="MM / YY">
+          <input placeholder="CVV">
+        </div>
+        <label><input type="radio"> Netbanking</label>
+        <div class="bank-grid">
+          <button type="button"><img src="https://cdn.simpleicons.org/hdfcbank/004C8F" alt="">HDFC</button><button type="button"><img src="https://cdn.simpleicons.org/icicibank/B65F13" alt="">ICICI</button><button type="button"><img src="https://cdn.simpleicons.org/statebankofindia/2554A5" alt="">SBI</button><button type="button"><img src="https://cdn.simpleicons.org/axisbank/7A003C" alt="">Axis</button>
+        </div>
+        <button id="payButton" onclick="confirmPayment()">Pay ₹0</button>
+        <small id="paymentStatus">Powered by Razorpay Secure</small>
+      </aside>
+    </section>
+  </main>
+
+  <script src="data.js?v=4"></script>
+  <script src="app.js?v=4"></script>
+</body>
+</html>

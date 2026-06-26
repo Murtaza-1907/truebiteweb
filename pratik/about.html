@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrueBite - TrueScore Framework</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <header class="nav">
+    <nav class="nav-left">
+      <a href="index.html#products">Products</a>
+      <a href="buy.html">Compare</a>
+      <a href="about.html">About</a>
+    </nav>
+    <a class="brand center-logo" href="index.html" aria-label="TrueBite home">
+      <img src="assets/truebite-logo-transparent-cropped.png" alt="TrueBite logo">
+    </a>
+    <button class="pill" onclick="location.href='checkout.html'">Cart <b id="cartCount">0</b></button>
+  </header>
+
+  <main class="about-page">
+    <section class="about-hero">
+      <p class="eyebrow">TrueScore Framework</p>
+      <h1>How every best pick is selected.</h1>
+      <p>TrueBite compares products inside the same category so the score is fair, practical and easy to understand before checkout.</p>
+    </section>
+
+    <section class="framework-grid">
+      <article>
+        <span>01</span>
+        <h3>Nutrition balance</h3>
+        <p>Products score higher for useful protein, fibre and sensible calories. Heavy sugar, excess salt and weak macro balance reduce the score.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Ingredient quality</h3>
+        <p>Cleaner ingredient lists are preferred. Products lose points when the label depends on avoidable additives, vague blends or heavy processing.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Category fairness</h3>
+        <p>A chocolate is not judged like oats. Every product is compared against two close competitors from the same Indian grocery category.</p>
+      </article>
+      <article>
+        <span>04</span>
+        <h3>Value for money</h3>
+        <p>The final pick must still make sense for everyday buying. Price, pack usefulness and nutrition-per-rupee are included before a winner is shown.</p>
+      </article>
+    </section>
+
+    <section class="score-breakdown">
+      <h2>What the score considers</h2>
+      <div class="breakdown-list">
+        <div><b>35%</b><span>Nutrients: protein, fibre, sugar, salt, calories and fat balance.</span></div>
+        <div><b>30%</b><span>Ingredients: simplicity, recognisable foods and additive load.</span></div>
+        <div><b>20%</b><span>Category fit: how well the product performs against direct alternatives.</span></div>
+        <div><b>15%</b><span>Price value: whether the healthier choice is still practical to buy.</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>truebite</b><p>Transparent product scoring for better grocery decisions.</p></div>
+    <a href="index.html#products">Back to products</a>
+  </footer>
+  <script src="data.js?v=4"></script>
+  <script src="app.js?v=4"></script>
+</body>
+</html>

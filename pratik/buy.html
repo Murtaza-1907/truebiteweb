@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrueBite - Buying Page</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <header class="nav">
+    <nav class="nav-left">
+      <a href="index.html#products">Products</a>
+      <a href="buy.html">Compare</a>
+      <a href="about.html">About</a>
+    </nav>
+    <a class="brand center-logo" href="index.html" aria-label="TrueBite home">
+      <img src="assets/truebite-logo-transparent-cropped.png" alt="TrueBite logo">
+    </a>
+    <button class="pill" onclick="location.href='checkout.html'">Cart <b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="compare page-hero" id="compare">
+      <div class="compare-head">
+        <p class="eyebrow" id="buyCategory">Buying page</p>
+        <h1 id="buyTitle">Best pick</h1>
+        <p id="buySubtitle">Loading comparison.</p>
+      </div>
+      <section class="compare-tools">
+        <input id="compareSearch" placeholder="Search product or category">
+        <select id="compareSelect"></select>
+      </section>
+      <div class="comparison" id="comparison"></div>
+      <article class="summary-card">
+        <h3 id="summaryTitle">Why this is the best pick</h3>
+        <p id="summaryText"></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>truebite</b><p>Compare before checkout.</p></div>
+    <a href="index.html#products">Back to products</a>
+  </footer>
+  <script src="data.js?v=4"></script>
+  <script src="app.js?v=4"></script>
+</body>
+</html>
